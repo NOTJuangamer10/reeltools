@@ -1,0 +1,137 @@
+/* estilos de ReelTools,
+voy a usar colores calidos porque mola mas */ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7ed;
+    color: #1c1917;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* cabezera */
+header {
+    background: #f97316;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 14px;
+}
+
+/* el main que ocupe el espacio */
+main {
+    flex: 1;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #c2410c;
+}
+
+/* formulario */
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #fed7aa;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #f97316;
+}
+
+button {
+    background: #f97316;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #ea580c;
+}
+
+/* lista de enlaces */
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #fed7aa;
+    word-break: break-all;
+}
+
+li a {
+    color: #c2410c;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+li button {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+li button:hover {
+    background: #fecaca;
+}
+
+#vacio {
+    color: #78716c;
+    text-align: center;
+    padding: 20px;
+}
+
+/* pie de pagina pegado abajo */
+footer {
+    background: #292524;
+    color: #a8a29e;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+}

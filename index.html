@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- lo de viewport lo vi en un tutorial para que se vea bien en el movil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReelTools - Beta 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🎬 ReelTools</h1>
+    <p>Guardo enlaces de reels para no olvidarme de las herramientas que sale</p>
+  </header>
+
+  <main>
+
+    <section id="formulario">
+      <h2>Añadir enlace</h2>
+      <form id="form-enlace">
+        <input type="url" id="input-url" placeholder="https://www.instagram.com/reel/..." required>
+        <button type="submit">Añadir</button>
+      </form>
+    </section>
+
+    <section id="lista">
+      <h2>Mis enlaces (<span id="contador">0</span>)</h2>
+      <ul id="lista-enlaces"></ul>
+      <p id="vacio">Aún no has añadido ningún enlace 🤷</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>ReelTools Beta 1 · hecho a mano</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
