@@ -5,7 +5,7 @@
 > RGG is here to solve that. It's a local tool that saves video links, repository names,
 > transcripts, and descriptions.
 
-![Status](https://img.shields.io/badge/status-beta_1-orange)
+![Status](https://img.shields.io/badge/status-beta_2-orange)
 ![Demo](https://img.shields.io/badge/demo-live-success)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -54,7 +54,7 @@ reeltools/
 ## 📅 Roadmap
 
 - [x] **Beta 1** — save video links locally
-- [ ] **Beta 2** — automatic transcript from the video's audio
+- [x] **Beta 2** — automatic transcript from the video's audio
 - [ ] **Beta 3** — extract & classify tools/repositories with AI
 - [ ] **Beta 4** — search, tags and export
 
