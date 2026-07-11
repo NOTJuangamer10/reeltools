@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- lo de viewport lo vi en un tutorial para que se vea bien en el movil -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReelTools - Beta 1</title>
+  <title>ReelTools - Beta 2</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,32 +12,66 @@
 
   <header>
     <h1>🎬 ReelTools</h1>
-    <p>Guardo enlaces de reels para no olvidarme de las herramientas que sale</p>
+    <p>Guardo enlaces de reels, transcripciones y herramientas para no olvidarme</p>
   </header>
 
   <main>
 
     <section id="formulario">
-      <h2>Añadir enlace</h2>
+      <h2>Añadir entrada</h2>
       <form id="form-enlace">
-        <input type="url" id="input-url" placeholder="https://www.instagram.com/reel/..." required>
-        <button type="submit">Añadir</button>
+
+        <label>
+          Nombre
+          <input type="text" id="input-nombre" placeholder="ej: Framer Motion" required>
+        </label>
+
+        <label>
+          URL del reels <input type="url" id="input-reel" placeholder="https://www.instagram.com/reel/...">
+        </label>
+
+        <label>
+          URL del repo o web (opcional)
+          <input type="url" id="input-repo" placeholder="https://github.com/...">
+        </label>
+
+        <label>
+          Descripción corta
+          <input type="text" id="input-desc" placeholder="para qué sirve la herramienta">
+        </label>
+
+        <label>
+          Etiquetas (separadas por comas)
+          <input type="text" id="input-tags" placeholder="react, animacion, frontend">
+        </label>
+
+        <label>
+          Transcripción<nav> <textarea id="input-trans" rows="5"
+              placeholder="pega aqui lo que dice el video"></textarea>
+        </label>
+
+        <button type="submit">Añadir entrada</button>
       </form>
     </section>
 
     <section id="lista">
-      <h2>Mis enlaces (<span id="contador">0</span>)</h2>
+      <div class="lista-cabecera">
+        <h2>Mis entradas (<span id="contador">0</span>)</h2>
+        <button id="btn-exportar" type="button">Exportar a .md</button>
+      </div>
+
       <ul id="lista-enlaces"></ul>
-      <p id="vacio">Aún no has añadido ningún enlace 🤷</p>
+      <p id="vacio">Aún no has añadido ninguna entrada.</p>
     </section>
 
   </main>
 
   <footer>
-    <p>ReelTools Beta 1 · hecho a mano</p>
+    <p>ReelTools Beta 2 · hecho a mano</p>
   </footer>
 
   <script src="app.js"></script>
 </body>
 
 </html>
+</nav>

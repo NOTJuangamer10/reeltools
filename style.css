@@ -1,40 +1,45 @@
-/* estilos de ReelTools,
-voy a usar colores calidos porque mola mas */ * {
+/* estilos de ReelTools beta 2
+   colores mas sobrios que en la beta 1
+   paleta: terracota + crema + gris oscuro */
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #fff7ed;
+    font-family: system-ui, Arial, sans-serif;
+    background: #fafaf9;
     color: #1c1917;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.5;
 }
 
-/* cabezera */
+/* cabecera */
 header {
-    background: #f97316;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background: #c2410c;
+    color: #fef3c7;
+    padding: 18px 20px;
 }
 
 header h1 {
-    font-size: 32px;
-    margin-bottom: 5px;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 4px;
 }
 
 header p {
     font-size: 14px;
+    opacity: 0.9;
 }
 
-/* el main que ocupe el espacio */
+/* main */
 main {
     flex: 1;
-    max-width: 700px;
+    max-width: 720px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -42,96 +47,241 @@ main {
 
 section {
     background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e7e5e4;
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 18px;
 }
 
 section h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #c2410c;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #44403c;
 }
 
 /* formulario */
 form {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 12px;
 }
 
-input {
-    flex: 1;
-    padding: 10px;
-    border: 2px solid #fed7aa;
-    border-radius: 6px;
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #57534e;
+    gap: 4px;
+}
+
+input,
+textarea {
+    font-family: inherit;
     font-size: 14px;
+    padding: 8px 10px;
+    border: 1px solid #d6d3d1;
+    border-radius: 4px;
+    background: white;
+    color: #1c1917;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     outline: none;
-    border-color: #f97316;
+    border-color: #c2410c;
 }
 
-button {
-    background: #f97316;
+textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+form button {
+    align-self: flex-start;
+    background: #c2410c;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 9px 18px;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+    font-family: inherit;
+    margin-top: 4px;
 }
 
-button:hover {
-    background: #ea580c;
+form button:hover {
+    background: #9a3412;
 }
 
-/* lista de enlaces */
+/* cabecera de la lista */
+.lista-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.lista-cabecera h2 {
+    margin-bottom: 0;
+}
+
+#btn-exportar {
+    background: white;
+    color: #c2410c;
+    border: 1px solid #c2410c;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+#btn-exportar:hover {
+    background: #fef3c7;
+}
+
+#btn-exportar:disabled {
+    border-color: #d6d3d1;
+    color: #a8a29e;
+    cursor: not-allowed;
+    background: white;
+}
+
+/* lista de entradas */
 ul {
     list-style: none;
 }
 
 li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #fed7aa;
-    word-break: break-all;
+    border: 1px solid #e7e5e4;
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    background: #fdfdfc;
 }
 
-li a {
+li .item-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+li .item-nombre {
+    font-weight: 600;
+    font-size: 15px;
+    color: #1c1917;
+    word-break: break-word;
+}
+
+li .item-fecha {
+    font-size: 11px;
+    color: #a8a29e;
+    margin-top: 2px;
+}
+
+li .btn-borrar {
+    background: none;
+    border: 1px solid #d6d3d1;
+    color: #78716c;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: inherit;
+    flex-shrink: 0;
+}
+
+li .btn-borrar:hover {
+    border-color: #b91c1c;
+    color: #b91c1c;
+}
+
+/* etiquetas */
+li .item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 6px 0;
+}
+
+li .tag {
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 3px;
+}
+
+/* descripcion */
+li .item-desc {
+    font-size: 13px;
+    color: #44403c;
+    margin: 6px 0;
+}
+
+/* enlaces */
+li .item-links {
+    font-size: 12px;
+    margin: 6px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+li .item-links a {
     color: #c2410c;
     text-decoration: none;
 }
 
-li a:hover {
+li .item-links a:hover {
     text-decoration: underline;
 }
 
-li button {
-    background: #fee2e2;
-    color: #dc2626;
-    padding: 5px 10px;
+/* desplegable de transcripcion */
+li details {
+    margin-top: 6px;
+    border-top: 1px dashed #e7e5e4;
+    padding-top: 6px;
+}
+
+li details summary {
+    cursor: pointer;
     font-size: 12px;
+    color: #57534e;
+    user-select: none;
 }
 
-li button:hover {
-    background: #fecaca;
+li details summary:hover {
+    color: #c2410c;
 }
 
+li details p {
+    font-size: 13px;
+    color: #44403c;
+    margin-top: 8px;
+    white-space: pre-wrap;
+    background: #fafaf9;
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 3px solid #c2410c;
+}
+
+/* mensaje de vacio */
 #vacio {
     color: #78716c;
     text-align: center;
-    padding: 20px;
+    padding: 24px;
+    font-size: 14px;
 }
 
-/* pie de pagina pegado abajo */
+/* pie de pagina */
 footer {
     background: #292524;
     color: #a8a29e;
     text-align: center;
-    padding: 15px;
-    font-size: 13px;
+    padding: 14px;
+    font-size: 12px;
 }
