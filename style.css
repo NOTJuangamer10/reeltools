@@ -285,3 +285,40 @@ footer {
     padding: 14px;
     font-size: 12px;
 }
+
+
+/* === estilos del buscador y boton editar === */
+
+#input-buscar {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d6d3d1;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    margin-bottom: 12px;
+    background: white;
+    color: #1c1917;
+}
+
+#input-buscar:focus {
+    outline: none;
+    border-color: #c2410c;
+}
+
+.btn-editar {
+    background: none;
+    border: 1px solid #d6d3d1;
+    color: #78716c;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: inherit;
+    flex-shrink: 0;
+}
+
+.btn-editar:hover {
+    border-color: #c2410c;
+    color: #c2410c;
+}
